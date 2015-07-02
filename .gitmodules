@@ -1,0 +1,3 @@
+[submodule "dbaccess"]
+	path = dbaccess
+	url = https://github.com/endersonmaia/totvs-dbaccess-docker

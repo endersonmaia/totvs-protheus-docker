@@ -1,0 +1,12 @@
+dbaccess:
+  build: ./dbaccess/
+  links:
+    - database:postgres
+  ports:
+    - "7890:7890"
+
+database:
+  build: ./postgres/
+  environment:
+    - POSTGRES_USER=protheus
+    - POSTGRES_PASS=protheus
