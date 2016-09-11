@@ -11,7 +11,7 @@ Dockerizar:
 - [x] TOTVS DBAccess 64bits
 - [x] PostgreSQL 9.3 praparado para o Protheus
 - [x] [DBMonitor](./dbmonitor/README.md)
-- [ ] TOTVS Protheus AppServer 64bits
+- [x] TOTVS Protheus AppServer 64bits
 - [ ] TOTVS License Server
 
 ## Guia rápico

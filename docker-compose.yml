@@ -1,3 +1,11 @@
+appserver:
+  build: ./appserver/
+  links:
+    - dbaccess:dbaccess
+  ports:
+    - "1100:1100"
+  user: root
+
 dbaccess:
   build: ./dbaccess/
   links:
@@ -6,7 +14,7 @@ dbaccess:
     - "7890:7890"
 
 database:
-  build: ./postgres/
+  build: ./dbaccess/postgres/
   environment:
     - POSTGRES_USER=protheus
     - POSTGRES_PASS=protheus
