@@ -1,20 +1,43 @@
-appserver:
-  build: ./appserver/
-  links:
-    - dbaccess:dbaccess
-  ports:
-    - "1100:1100"
-  user: root
+version: '2'
 
-dbaccess:
-  build: ./dbaccess/
-  links:
-    - database:postgres
-  ports:
-    - "7890:7890"
+services:
 
-database:
-  build: ./dbaccess/postgres/
-  environment:
-    - POSTGRES_USER=protheus
-    - POSTGRES_PASS=protheus
+  appserver:
+    build: ./appserver/
+    ports:
+      - "1100:1100"
+    user: root
+    depends_on:
+      - dbaccess
+    environment:
+      - DBACCESS_SERVER=${DBACCESS_SERVER}
+      - DBACCESS_ALIAS=${DBACCESS_ALIAS}
+      - DBACCESS_PORT=${DBACCESS_PORT}
+    volumes:
+      - ${PROTHEUS_DATA_PATH}:/totvs11/microsiga/protheus_data
+      - ${PROTHEUS_APO_PATH}:/totvs11/microsiga/protheus/apo
+
+  dbaccess:
+    build: ./dbaccess/
+    environment:
+      - DB_HOST=${DB_HOST}
+      - DB_PORT=${DB_PORT}
+      - DB_USER=${DB_USER}
+      - DB_PASS=${DB_PASS}
+      - DB_NAME=${DB_NAME}
+    ports:
+      - "7890:7890"
+    depends_on:
+      - database
+
+  database:
+    build: ./dbaccess/postgres/
+    environment:
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASS}
+      - PG_DATA:${PG_DATA}
+    volumes:
+      - pg_data:${PG_DATA}
+
+volumes:
+  pg_data: {}

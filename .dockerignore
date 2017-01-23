@@ -1,2 +1,4 @@
 .dockerignore
 .git
+./apo
+./protheus_data

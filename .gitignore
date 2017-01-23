@@ -2,3 +2,6 @@
 *.TAR.GZ
 *.zip
 *.ZIP
+.env
+apo/
+protheus_data/

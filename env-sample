@@ -1,0 +1,16 @@
+#APPSERVER Config
+PROTHEUS_DATA_PATH=./apo
+PROTHEUS_APO_PATH=./protheus_data
+
+# DBAccess Config
+DBACCESS_SERVER=dbaccess
+DBACCESS_ALIAS=protheus
+DBACCESS_PORT=7890
+
+# Database Config
+DB_HOST=database
+DB_PORT=5432
+DB_USER=protheus
+DB_PASS=protheus
+DB_NAME=protheus
+PG_DATA=/var/lib/postgresql/data
