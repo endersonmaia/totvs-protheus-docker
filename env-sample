@@ -1,6 +1,6 @@
 #APPSERVER Config
-PROTHEUS_DATA_PATH=./apo
-PROTHEUS_APO_PATH=./protheus_data
+PROTHEUS_DATA_PATH=./totvs11/protheus_data
+PROTHEUS_APO_PATH=./totvs11/protheus/apo
 
 # DBAccess Config
 DBACCESS_SERVER=dbaccess
