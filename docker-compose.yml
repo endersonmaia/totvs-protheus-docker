@@ -14,8 +14,8 @@ services:
       - DBACCESS_ALIAS=${DBACCESS_ALIAS}
       - DBACCESS_PORT=${DBACCESS_PORT}
     volumes:
-      - ${PROTHEUS_DATA_PATH}:/totvs11/microsiga/protheus_data
-      - ${PROTHEUS_APO_PATH}:/totvs11/microsiga/protheus/apo
+      - ${PROTHEUS_DATA_PATH}:/totvs12/microsiga/protheus_data
+      - ${PROTHEUS_APO_PATH}:/totvs12/microsiga/protheus/apo
 
   dbaccess:
     build: ./dbaccess/
