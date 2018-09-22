@@ -1,6 +1,9 @@
-[submodule "dbaccess"]
-	path = dbaccess
-	url = https://github.com/endersonmaia/totvs-dbaccess-docker
+[submodule "totvs-appserver-docker"]
+	path = totvs-appserver-docker
+	url = https://github.com/endersonmaia/totvs-appserver-docker
 [submodule "appserver"]
 	path = appserver
 	url = https://github.com/endersonmaia/totvs-appserver-docker
+[submodule "dbaccess"]
+	path = dbaccess
+	url = https://github.com/endersonmaia/totvs-dbaccess-docker
